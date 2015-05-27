@@ -1,0 +1,8 @@
+#!/bin/bash
+#Copies the current ZSH conf to be added to git
+
+cp -r ~/.z* .
+for file in .z*
+do
+  mv $file ${file/.z/z}
+done
